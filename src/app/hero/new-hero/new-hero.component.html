@@ -1,0 +1,24 @@
+<div>
+  <label>Nome: </label>
+  <input placeholder="Nome" [(ngModel)]="hero.name">
+</div>
+<div>
+  <label>Força: </label>
+  <input placeholder="Força" [(ngModel)]="hero.forca">
+</div>
+<div>
+  <label>Inteligência: </label>
+  <input placeholder="Inteligência" [(ngModel)]="hero.inteligencia">
+</div>
+<div>
+  <label>Agilidade: </label>
+  <input placeholder="Agilidade" [(ngModel)]="hero.agilidade">
+</div>
+<div>
+  <label>Destreza: </label>
+  <input placeholder="Destreza" [(ngModel)]="hero.destreza">
+</div>
+<button (click)="submit()">Salvar</button>
+<br>
+<br>
+<button routerLink="/heroes">Voltar</button>

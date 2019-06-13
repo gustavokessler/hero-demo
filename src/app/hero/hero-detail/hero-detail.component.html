@@ -1,0 +1,10 @@
+<div *ngIf="hero">
+  <h2>{{hero.id + " " + hero.name | uppercase}} Detalhes</h2>
+  <div><span>força: </span>{{hero.forca}}</div>
+  <div><span>inteligência: </span>{{hero.inteligencia}}</div>
+  <div><span>agilidade: </span>{{hero.agilidade}}</div>
+  <div><span>destreza: </span>{{hero.destreza}}</div>
+  <br>
+  <br>
+</div>
+<button routerLink="/heroes">Votlar</button>

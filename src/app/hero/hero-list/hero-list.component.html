@@ -1,0 +1,23 @@
+<ng-container *ngIf="heroes; else elseTemplate">
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
+      <span class="badge">{{hero.id}}</span> {{hero.name}}
+    </li>
+  </ul>
+</ng-container>
+
+<div *ngIf="selectedHero">
+  <span>{{selectedHero.name}}</span>
+  <br>
+  <button routerLink="/detail/{{selectedHero.id}}">Ver Detalhes</button>
+  <br>
+  <br>
+</div>
+
+<button routerLink="/new">Novo Herói</button>
+<br>
+<br>
+<button routerLink="">Sair</button>
+<ng-template #elseTemplate>
+  Não há heroes
+</ng-template>
